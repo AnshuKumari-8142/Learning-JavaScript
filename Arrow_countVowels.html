@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        let count = 0;
+        const countVowels = (str) =>{
+            for(let char of str){
+                if(char === "a" || char === "A" ||       // OR logic symbol
+                    char === "e" || char === "E" ||
+                    char === "i" || char === "I" ||
+                    char === "o" || char === "O" ||
+                    char === "u" || char === "U"
+                ){
+                    count ++;
+                }
+            }
+        };
+        let string = prompt("Enter a string:");
+        console.log(string);
+        countVowels(string);
+        console.log("Number of Vowels in this string =", count);
+    </Script>
+</body>
+</html>

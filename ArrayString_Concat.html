@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let foodItems = ["Pizza", "Burger", "Pasta", "Fries", "Sandwich"];
+        let numbers = [1,2,3,4,5,6,7];
+        numbers.toString();
+        foodItems.toString();
+        console.log(foodItems);
+        console.log(numbers);
+
+        let fastFood = ["Pizza", "Burger", "Pasta", "Sandwich"];
+        let IndianFood = ["dal", "roti", "rice"];
+        let Food = fastFood.concat(IndianFood);
+        console.log(Food);
+
+        let FastFood = ["Pizza", "Burger", "Pasta", "Sandwich"];
+        //fastFood.unshift("meggie");//It's work like push method
+        // console.log(fastFood);
+
+        FastFood.shift();
+        console.log(FastFood);
+    </script>
+</body>
+</html>
