@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [34,453, 544,3435,345,];
+        let Map = arr.map((val) =>{
+            return val;
+        });
+
+        const Filter = arr.filter((val) =>{
+        if(val <= 600){
+            return val;
+        }});
+
+        let Reduce = arr.reduce((pre, curr) =>{
+            return pre + curr;
+        });
+        console.log(Map);
+        console.log(Filter);
+        console.log(Reduce);
+        
+    </script>
+</body>
+</html>

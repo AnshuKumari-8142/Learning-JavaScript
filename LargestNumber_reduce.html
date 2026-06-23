@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = [23,2343,332,2344,234,43,3433,54674,5776];
+        let largestNum = num.reduce((pre, curr) =>{
+            return pre > curr? pre : curr; // if(pre>curr){return pre}else{return curr};
+        });
+        console.log(largestNum); 
+    </script>
+</body>
+</html>
