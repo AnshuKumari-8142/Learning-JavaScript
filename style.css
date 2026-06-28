@@ -1,46 +1,83 @@
-*{
+/* Reset and Base Styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
-body{
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background:#000;
-    overflow: hidden;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.container{
-    position: absolute;
-    top: 20%;
-    height: 90%;
+
+/* Light Mode (Default) */
+.container {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
 }
-.circle{
-    
-    position:absolute;
-    background: transparent;
-    width: calc((var--i)* 2.5vmin);
-    aspect-ratio: 1;
-    border-radius: 50%;
-    border: 3px solid rgb(0, 255, 13);
-    transform-style: preserve-3d;
-    transform: rotateX(70deg) translateZ(50px);
-    animation: animate 3s ease-in-out calc(var(--i)*0.08s) infinite;
-    box-shadow: 0 0 15px rgb(124, 124, 124),
-    inset 0 0 15px rgb(124, 124, 124);
+
+#clock {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 1.5rem 0 0.5rem 0;
+    letter-spacing: 2px;
 }
-@keyframes animate{
-    0%,
-    100%{
-        transform: rotateX(70deg) translateZ(50px) translateY(0);
-        filter: hue-rotate(0);
-    }
-    50%{
-        transform: rotateX(70deg) translateZ(50px) translateY(-50vmin);
-        filter: hue-rotate(360deg);
-    }
+
+#date-display {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+button {
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.theme-btn {
+    background-color: #e4e6eb;
+    color: #333;
+    align-self: flex-end;
+}
+
+.format-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Dark Mode Overrides */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .container {
+    background-color: #1e1e1e;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .theme-btn {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+body.dark-mode #date-display {
+    color: #aaa;
 }
